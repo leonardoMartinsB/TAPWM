@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Cinema - Atividade 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+    <h2>Pesquisa de Filme <small>(#<span id="count">0</span>/45)</small></h2>
+    
+    <div class="input-group">
+        <label>Idade:</label>
+        <input type="number" id="idade" placeholder="Ex: 20">
+    </div>
+
+    <div class="input-group">
+        <label>Sexo:</label>
+        <select id="sexo">
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Outros">Outros</option>
+        </select>
+    </div>
+
+    <div class="input-group">
+        <label>Opinião sobre o filme:</label>
+        <select id="opiniao">
+            <option value="4">4 - Otimo</option>
+            <option value="3">3 - Bom</option>
+            <option value="2">2 - Regular</option>
+            <option value="1">1 - Pessimo</option>
+        </select>
+    </div>
+
+    <button id="btnEnviar">Registrar Voto</button>
+
+    <div id="statsArea" class="stats">
+        <p>Media de Idade: <b id="mIdade">0</b></p>
+        <p>Mais Velho / Novo: <b><span id="mVelho">0</span> / <span id="mNovo">0</span></b></p>
+        <p>Votos Pessimo: <b id="qPessimo">0</b></p>
+        <p>% Otimo e Bom: <b id="pOtimoBom">0%</b></p>
+        <p>H / M / O: <b><span id="qH">0</span> / <span id="qM">0</span> / <span id="qO">0</span></b></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
