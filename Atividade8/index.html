@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 8 - Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    
+    <main class="glass-container">
+        <header>
+            <h1 class="gradient-text">Atividade 8</h1>
+            <p class="subtitle">Laboratório de Lógica e Matemática</p>
+        </header>
+        
+        <div class="cards-wrapper">
+            <section class="glass-card">
+                <div class="card-header">
+                    <span class="icon">🔢</span>
+                    <h2>Exercício 1</h2>
+                </div>
+                <p class="description">Insira 3 números separados por vírgula para calcular a soma e seus quadrados.</p>
+                <div class="input-group">
+                    <input type="text" id="ex1-input" placeholder="Ex: 5, 8, 12" autocomplete="off">
+                </div>
+                <button id="ex1-btn" class="glow-btn">Calcular Resultados</button>
+                <div id="ex1-output" class="result-box hidden"></div>
+            </section>
+
+            <section class="glass-card">
+                <div class="card-header">
+                    <span class="icon">🔠</span>
+                    <h2>Exercício 2</h2>
+                </div>
+                <p class="description">Insira 5 letras separadas por vírgula para gerar anagramas exclusivos.</p>
+                <div class="input-group">
+                    <input type="text" id="ex2-input" placeholder="Ex: M, A, G, I, C" autocomplete="off">
+                </div>
+                <button id="ex2-btn" class="glow-btn">Gerar Anagramas</button>
+                <div id="ex2-output" class="result-box hidden"></div>
+            </section>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
