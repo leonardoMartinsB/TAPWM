@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 12</title>
+</head>
+
+<body>
+
+    <h1 id="titulo">Abra a Janela</h1>
+    <img id="janela" src="fechada.jpg" width="300" onmouseover="entrou()" onmouseout="saiu()" onclick="clicou()">
+
+    <script>
+        function entrou() {
+            document.getElementById("janela").src = "aberta.jpg";
+            document.getElementById("titulo").innerText = "Janela Aberta";
+        }
+
+        function saiu() {
+            document.getElementById("janela").src = "fechada.png";
+            document.getElementById("titulo").innerText = "Janela Fechada";
+        }
+
+        function clicou() {
+            document.getElementById("janela").src = "quebrada.jpg";
+            document.getElementById("titulo").innerText = "Janela Quebrada";
+            document.getElementById("janela").onmouseover = null;
+            document.getElementById("janela").onmouseout = null;
+        }
+    </script>
+
+</body>
+
+</html>
