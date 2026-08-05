@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 2 - Fatec Sorocaba</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 320px;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #333;
+            font-size: 20px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            background-color: #fafafa;
+            cursor: pointer;
+            outline: none;
+        }
+
+        select:focus {
+            border-color: #007bff;
+        }
+    </style>
+    <script>
+        function carregarCurso(select) {
+            var curso = select.value;
+
+            if (curso !== "") {
+                var confirma = confirm("Deseja realmente abrir a janela do curso " + curso + "?");
+
+                if (confirma) {
+                    var janela = window.open("", "", "width=600,height=300");
+                    janela.document.write(`
+                        <html>
+                        <head>
+                            <title>${curso}</title>
+                            <style>
+                                body { font-family: Arial, sans-serif; padding: 20px; background-color: #fafafa; color: #333; }
+                                h2 { color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 8px; }
+                                p { line-height: 1.6; }
+                            </style>
+                        </head>
+                        <body>
+                            <h2>${curso}</h2>
+                            <p>Informações detalhadas sobre o curso de <strong>${curso}</strong> oferecido pela Fatec Sorocaba.</p>
+                        </body>
+                        </html>
+                    `);
+                }
+
+                select.value = "";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="card">
+        <h2>Cursos Fatec Sorocaba</h2>
+
+        <select onchange="carregarCurso(this)">
+            <option value="">Selecione um curso...</option>
+            <option value="Análise e Desenvolvimento de Sistemas">Análise e Desenvolvimento de Sistemas</option>
+            <option value="Gestão Empresarial">Gestão Empresarial</option>
+            <option value="Logística">Logística</option>
+            <option value="Projetos Mecânicos">Projetos Mecânicos</option>
+            <option value="Fabricação Mecânica">Fabricação Mecânica</option>
+        </select>
+    </div>
+
+</body>
+
+</html>
